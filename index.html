@@ -14,7 +14,9 @@
 -->
 <header class="encabezado">
   <a class="marca" href="#inicio">
-    <img src="img/logo.png" alt="Logo de Mar y Sabor Cevichería" class="logo">
+    <figure>
+      <img src="img/logo.png" alt="Logo de Mar y Sabor Cevichería" class="logo">
+    </figure>
     Mar y Sabor Cevichería
   </a>
 
@@ -38,18 +40,15 @@
   Adentro van las section del negocio: portada, nosotros, menú y contacto.
 -->
 <main id="inicio">
-
+ <h1>Mar y Sabor Cevichería</h1>
   <section class="portada">
-    <h1>Mar y Sabor Cevichería</h1>
     <p class="entrada">
       Ceviches, mariscos y pescado fresco preparados en Quibdó, con
       <strong>servicio exclusivo a domicilio</strong>. Cada plato se hace
       al momento del pedido, no antes.
     </p>
-  </section>
-
-  <!-- "Nosotros" es una section: es un bloque temático del sitio, no un producto que se entienda solo fuera de la página. -->
-  <section id="nosotros">
+  </section> 
+     <section id="nosotros">
     <h2>Quiénes somos</h2>
     <p>
       Mar y Sabor es un negocio familiar de comida de mar ubicado en
@@ -84,20 +83,23 @@
     <div class="rejilla">
 
       <article class="plato">
-        <img src="img/ceviche.png" alt=" nuestro Ceviche de camarones servido en plato hondo">
+        <figure class="foto">
+          <img src="img/ceviche.png" alt=" nuestro Ceviche de camarones servido en plato hondo">
+        </figure>
         <h4>Ceviche de camarones</h4>
         <p>Tamaños junior, mediano y grande, según el hambre.</p>
         <p class="precio">Desde $19.000 COP</p>
       </article>
 
       <article class="plato">
-        <img src="img/camarones.png" alt="nuestros Camarones al ajillo salteados">
+        <figure class="foto">
+          <img src="img/camarones.png" alt="nuestros Camarones al ajillo salteados">
+        </figure>
         <h4>Camarones al ajillo</h4>
         <p>El más pedido entre semana, con arroz de coco de adición.</p>
         <p class="precio">$35.000 COP</p>
       </article>
 
-      <!-- Esta imagen va dentro de un figure porque lleva su propio pie de foto. -->
       <article class="plato">
         <figure class="foto">
           <img src="img/arroz mar y sabor.png" alt="Plato de arroz con mariscos, con mejillones, camarones y otros mariscos, acompañado de patacones y verduras. La comida ocupa casi todo el plato en una vista cercana; en la esquina inferior izquierda aparece un pequeño logotipo con el texto Mar y Sabor y el número 5.">
@@ -111,7 +113,6 @@
     </div>
 
     <h3>Bebidas</h3>
-    <!-- Lista sin orden: ninguna bebida va antes que otra, es un catálogo. -->
     <ul class="lineas">
       <li>Jugos naturales de mango, piña y guayaba agria — $8.000 COP</li>
       <li>Jugo de maracuyá — $10.000 COP</li>
@@ -120,7 +121,6 @@
     </ul>
 
     <h3>Cómo hacer su pedido</h3>
-    <!-- Lista ordenada: aquí el orden sí importa, son los pasos del pedido. -->
     <ol class="pasos">
       <li>Revise el menú y escoja sus platos.</li>
       <li>Escríbanos o llámenos al número de contacto.</li>
@@ -129,7 +129,6 @@
     </ol>
 
     <h3>Algunos precios de la carta</h3>
-    <!-- Tabla porque esto sí tiene filas y columnas de datos reales. -->
     <table class="tabla">
       <caption>Precios vigentes 2026, cócteles y mariscos</caption>
       <thead>
@@ -172,10 +171,6 @@
       domicilio</strong>, no tenemos servicio para comer en el local.
     </p>
 
-    <!--
-      Cada campo con su <label>, y el for del label igual al id del
-      campo, para que un lector de pantalla anuncie de qué se trata.
-    -->
     <form class="formulario" action="#" method="post">
 
       <p class="campo">
@@ -213,10 +208,6 @@
 </main>
 
 
-<!--
-  <aside> · información relacionada pero secundaria.
-  Si se quita, el resto de la página sigue teniendo sentido completo.
--->
 <aside class="lateral" id="horarios">
   <h2>Horario de domicilios</h2>
   <p>Lunes: 11:00 a.m. a 3:00 p.m.</p>
