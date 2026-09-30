@@ -11,20 +11,20 @@
 <!--
   <header> · la cabecera del SITIO completo.
   Va el nombre del negocio (marca) y la navegación principal, nada más.
+  Sin class: como solo hay un header en la página, el CSS lo
+  selecciona directo por la etiqueta.
 -->
-<header class="encabezado">
+<header>
   <a class="marca" href="#inicio">
-    <figure>
-      <img src="img/logo.png" alt="Logo de Mar y Sabor Cevichería" class="logo">
-    </figure>
+    <img src="img/logo.png" alt="Logo de Mar y Sabor Cevichería" class="logo">
     Mar y Sabor Cevichería
   </a>
 
   <!--
-    <nav> · solo la navegación PRINCIPAL, escrita como lista porque
-    es exactamente eso: una lista de enlaces a las secciones de la página.
+  navegación principal del sitio, con enlaces a las secciones de la misma página.
+  El atributo aria-label le da un nombre a la navegación para que un lector de pantalla
   -->
-  <nav class="menu" aria-label="Navegación principal">
+  <nav aria-label="Navegación principal">
     <ul>
       <li><a href="#menu">Menú</a></li>
       <li><a href="#horarios">Horarios</a></li>
@@ -33,22 +33,17 @@
     </ul>
   </nav>
 </header>
-
-
-<!--
-  <main> · el contenido principal y ÚNICO de esta página.
-  Adentro van las section del negocio: portada, nosotros, menú y contacto.
--->
 <main id="inicio">
- <h1>Mar y Sabor Cevichería</h1>
+  <h1>Mar y Sabor Cevichería</h1>
+
   <section class="portada">
     <p class="entrada">
       Ceviches, mariscos y pescado fresco preparados en Quibdó, con
       <strong>servicio exclusivo a domicilio</strong>. Cada plato se hace
       al momento del pedido, no antes.
     </p>
-  </section> 
-     <section id="nosotros">
+  </section>
+  <section id="nosotros">
     <h2>Quiénes somos</h2>
     <p>
       Mar y Sabor es un negocio familiar de comida de mar ubicado en
@@ -74,27 +69,17 @@
     </p>
 
     <h3>Platos destacados</h3>
-
-    <!--
-      Cada plato es un <article>: si se sacara de esta página (por
-      ejemplo a una red social) seguiría entendiéndose por sí solo.
-      Por eso no es una section.
-    -->
     <div class="rejilla">
 
       <article class="plato">
-        <figure class="foto">
-          <img src="img/ceviche.png" alt=" nuestro Ceviche de camarones servido en plato hondo">
-        </figure>
+        <img src="img/ceviche.png" alt="Nuestro ceviche de camarones servido en plato hondo">
         <h4>Ceviche de camarones</h4>
         <p>Tamaños junior, mediano y grande, según el hambre.</p>
         <p class="precio">Desde $19.000 COP</p>
       </article>
 
       <article class="plato">
-        <figure class="foto">
-          <img src="img/camarones.png" alt="nuestros Camarones al ajillo salteados">
-        </figure>
+        <img src="img/camarones.png" alt="Nuestros camarones al ajillo salteados">
         <h4>Camarones al ajillo</h4>
         <p>El más pedido entre semana, con arroz de coco de adición.</p>
         <p class="precio">$35.000 COP</p>
@@ -102,7 +87,7 @@
 
       <article class="plato">
         <figure class="foto">
-          <img src="img/arroz mar y sabor.png" alt="Plato de arroz con mariscos, con mejillones, camarones y otros mariscos, acompañado de patacones y verduras. La comida ocupa casi todo el plato en una vista cercana; en la esquina inferior izquierda aparece un pequeño logotipo con el texto Mar y Sabor y el número 5.">
+          <img src="img/arroz mar y sabor.png" alt="Arroz Mar y Sabor con mariscos y patacones">
           <figcaption>Nuestro sello: siempre pescado y mariscos frescos.</figcaption>
         </figure>
         <h4>Arroz Mar &amp; Sabor</h4>
@@ -121,6 +106,7 @@
     </ul>
 
     <h3>Cómo hacer su pedido</h3>
+    <!-- Lista ordenada: aquí el orden sí importa, son los pasos del pedido. -->
     <ol class="pasos">
       <li>Revise el menú y escoja sus platos.</li>
       <li>Escríbanos o llámenos al número de contacto.</li>
@@ -129,38 +115,40 @@
     </ol>
 
     <h3>Algunos precios de la carta</h3>
-    <table class="tabla">
-      <caption>Precios vigentes 2026, cócteles y mariscos</caption>
-      <thead>
-        <tr>
-          <th>Producto</th>
-          <th>Presentación</th>
-          <th>Precio</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Coctel de camarones</td>
-          <td>Mediano</td>
-          <td>$24.000 COP</td>
-        </tr>
-        <tr>
-          <td>Coctel de langostinos</td>
-          <td>Única</td>
-          <td>$44.000 COP</td>
-        </tr>
-        <tr>
-          <td>Cazuela de mariscos</td>
-          <td>Personal</td>
-          <td>$48.000 COP</td>
-        </tr>
-        <tr>
-          <td>Parijuela de mariscos</td>
-          <td>Personal</td>
-          <td>$39.000 COP</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="tabla-envoltura">
+      <table class="tabla">
+        <caption>Precios vigentes 2026, cócteles y mariscos</caption>
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Presentación</th>
+            <th>Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Coctel de camarones</td>
+            <td>Mediano</td>
+            <td>$24.000 COP</td>
+          </tr>
+          <tr>
+            <td>Coctel de langostinos</td>
+            <td>Única</td>
+            <td>$44.000 COP</td>
+          </tr>
+          <tr>
+            <td>Cazuela de mariscos</td>
+            <td>Personal</td>
+            <td>$48.000 COP</td>
+          </tr>
+          <tr>
+            <td>Parijuela de mariscos</td>
+            <td>Personal</td>
+            <td>$39.000 COP</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </section>
 
   <section id="contacto">
@@ -171,6 +159,7 @@
       domicilio</strong>, no tenemos servicio para comer en el local.
     </p>
 
+   
     <form class="formulario" action="#" method="post">
 
       <p class="campo">
@@ -184,7 +173,7 @@
       </p>
 
       <p class="campo">
-        <label for="pedido">Qué almuerzo desea pedir</label>
+        <label for="pedido">Qué desea pedir</label>
         <select id="pedido" name="pedido">
           <option value="ceviche">Ceviche</option>
           <option value="camarones">Camarones al ajillo</option>
@@ -199,7 +188,7 @@
       </p>
 
       <p class="campo">
-        <button class="boton" type="submit">Enviar su pedido</button>
+        <button class="boton" type="submit">Enviar pedido</button>
       </p>
 
     </form>
@@ -208,7 +197,9 @@
 </main>
 
 
-<aside class="lateral" id="horarios">
+
+
+<aside id="horarios">
   <h2>Horario de domicilios</h2>
   <p>Lunes: 11:00 a.m. a 3:00 p.m.</p>
   <p>Martes a sábados: 10:00 a.m. a 5:00 p.m.</p>
@@ -220,12 +211,15 @@
 </aside>
 
 
-<footer class="pie">
+<footer>
   <p>Mar y Sabor Cevichería · Quibdó, Chocó</p>
   <p>
     Tel/WhatsApp: <a href="tel:+573135498438">+57 313 549 8438</a>
     ·
     Correo: <a href="mailto:marysaborquibdo@gmail.com">marysaborquibdo@gmail.com</a>
+  </p>
+  <p>
+    <small>Sitio hecho como taller de la Electiva de Profundización I: Desarrollo de Software, Uniclaretiana.</small>
   </p>
 </footer>
 
